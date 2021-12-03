@@ -1,0 +1,95 @@
+#include <iostream>
+using namespace std;
+
+char garis[60] = "===========================================";
+int g(){
+  cout<<garis<<endl;
+  return 0;
+}
+
+float luasSegitiga(float a, float t, float c){
+  float luas=(a*t)/2;
+  return luas;
+}
+
+float kelilingSegitiga(float a, float t, float c){
+  float keliling=(a+t+c);
+  return keliling;
+}
+
+int luasPersegiPanjang(int p, int t){
+  int luas=(p*t);
+  return luas;
+}
+
+float kelilingPersegiPanjang(int p, int t){
+ float keliling=2*(p+t);
+  return keliling;
+}
+
+float luasLingkaran(float r){
+  float luas=(3.14*r*r);
+  return luas;
+}
+
+float kelilingLingkaran(float r){
+float keliling=2*3.14*r;
+  return keliling;
+}
+
+int main(){
+  float a, b, c;
+  int pilihan;
+  char pilih;
+  double luas;
+  g();
+  cout <<" Selamat datang di program menghitung luas"<<endl;
+  g();
+  cout <<"Luas dan keliling apa yang hendak anda hitung ? "<<endl;
+  cout <<"1. Segitiga" << endl;
+  cout <<"2. Persegi panjang " << endl;
+  cout <<"3. Lingkaran" << endl;
+  g();
+  do {
+    cout << "Pilihan anda : ";
+    cin >> pilihan;
+  switch (pilihan){
+      case 1:
+        cout << "Masukkan Sisi pertama :";
+        cin >>a;
+        cout << "Masukkan sisi kedua :";
+        cin >>b;
+        cout << "Masukkan sisi ketiga :";
+        cin >>c;
+        cout << "- Luas Segitiga adalah : "<<luasSegitiga(a,b,c)<<endl;
+        cout << "- Keliling Segitiga adalah "<<kelilingSegitiga(a,b,c)<<endl;
+        break;
+      case 2:
+        cout << "Masukkan sisi pertama : ";
+        cin >>a;
+        cout << "Masukkan sisi kedua : ";
+        cin >>b;
+        cout << "- Luas Persegi Panjang adalah : "<<luasPersegiPanjang(a,b)<<endl;
+        cout << "- Keliling Persegi Panjang adalah : "<<kelilingPersegiPanjang(a,b);
+        break;
+      case 3:
+        cout <<"Masukkan Jari Jari Lingkaran :";
+        cin >>a;
+        cout << "- Luas Lingkaran adalah : "<<luasLingkaran(a)<<endl;
+        cout << "- Keliling Lingkaran adalah : "<<kelilingLingkaran(a)<<endl;
+        break;
+      default:
+        cout << "Kode yang anda masukkan salah ";
+  }
+        cout << endl;
+        cout << "\nAnda ingin mengulang perhitungan ? (Y/N) : ";
+        cin >>pilih;
+   } while (pilih=='Y');
+    while (pilih=='N'){
+    break;
+    };
+  
+  
+  return luas;
+  
+}
