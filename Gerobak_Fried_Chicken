@@ -76,8 +76,8 @@ int main(){
 	cout << endl;
 	  cout <<"Apakah anda ingin memesan lagi? (Y/N) :";
   cin >>loop;
-  } while (loop=='y'||loop=='Y');
-  if (loop=='n'||'N'){
+  } while (loop=='Y');
+  if (loop=='N'){
   cout <<"Terima Kasih dan Selamat Menikmati"<<endl;}
   getchar();
   return 0;
