@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  int n;
+
+  cout << "Masukkan jumlah pola : ";
+  cin >> n;
+  for (int a=1; a<=n; a++){
+    for (int b=1; b<=a; b++){
+    cout << '*';
+  }
+  cout << endl;
+  }
+
+  getchar();
+  return 0;
+}
